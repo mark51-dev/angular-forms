@@ -1,0 +1,58 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+
+.left {
+  width: 50%;
+}
+
+.right {
+  width: 50%;
+}
+
+.right .form {
+  padding-top: 200px;
+}
+
+.divider {
+  margin-top: 30px;
+}
+
+.form__submit {
+  display: none;
+}
+
+.form__reset-password {
+  text-decoration: none;
+  color: royalblue;
+  transition: .3s;
+}
+
+.form__reset-password:hover {
+  opacity: .8;
+}
+
+
+.circle {
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  position: relative;
+  display: inline-block;
+  border: 2px solid royalblue;
+  margin-left: 20px;
+}
+
+.circle:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-left: 6px solid royalblue;
+}

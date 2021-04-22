@@ -1,0 +1,42 @@
+<!-- Добрый день Константин, у меня неплохая теоритическая база javascript и есть немного практической. Я уделяю много времени учебе(javascript).
+Предлагаю пообщатсья насчет этой вакансии на собеседовании.
+ -->
+<div class="wrapper">
+  <div class="left"></div>
+  <div class="right">
+    <div class="logo">
+      <img width="35" class="logo__image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/768px-Telegram_logo.svg.png" alt="logo">
+    </div>
+    <h1 class="heading">Cybereason Customer Community</h1>
+    <span class="slogan">Slogan</span>
+    <form class="right__form" [formGroup]="form" (ngSubmit)="submitForm()">
+      <div class="divider">
+        <mat-form-field class="example-full-width">
+          <mat-label>Email</mat-label>
+          <input type="email" matInput formControlName="email" placeholder="admin@admin.com">
+          <mat-error *ngIf="form.get('email').invalid && form.get('email').touched">
+            Please enter a valid email address
+          </mat-error>
+          <mat-error *ngIf="form.get('email').errors?.required">
+            Email can't be <strong>empty</strong>
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div class="divider">
+        <mat-form-field class="example-full-width">
+          <mat-label>Password</mat-label>
+          <input type="password" matInput formControlName="password" placeholder="password">
+          <mat-error *ngIf="form.get('password').invalid && form.get('password').touched">
+            Please enter a valid password
+          </mat-error>
+          <mat-error *ngIf="form.get('password').errors?.pattern">
+            Password must have at least one uppercase <strong>letter</strong> and <strong>number</strong>
+          </mat-error>
+        </mat-form-field>
+        <button type="submit" class="form__submit"></button>
+      </div>
+    </form>
+    <p><a href="#" class="form__reset-password">Reset your password?</a> <span class="circle"></span></p>
+  </div>
+</div>
+
